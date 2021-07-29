@@ -1,3 +1,14 @@
+# Overview
+SAST is a begginer to advance web app pen testing labs and learning material. User can perform sql injection, sql injection, XS scripting ect exercises to level up their skills.
+
+# Technologies Used
+- NodeJs
+- MongoDb
+- ExpressJs
+- JasonWebToken
+- Mongoose
+- NodeMailer
+
 
 # Getting Started
 1. Clone the project
