@@ -1,0 +1,28 @@
+extends base
+mixin formInputs(data,id,type)
+    .form-inputs
+        label.form-label=data
+        input.form-input( type=`${type}` id=`${id}` name='username' placeholder=`Enter your ${id}`)    
+block content 
+   div 
+    .outer
+      form.form#signup-form(noValidate )
+       div
+        img.div-login-logo(src="/images/Sast white.png" alt="Logo")
+              
+       +formInputs("Username","signup-form-username","text")
+       +formInputs("Email","signup-form-email","email")
+       +formInputs("Password","signup-form-password","password")
+       +formInputs("ConfirmPassword","signup-form-confirmPassword","password")
+       button.form-input-btn(type='submit')
+         h5.here Let's Signup
+        
+       span.form-input-login
+        div
+         h Already have an account? Login 
+          a(href="/signin") Here! 
+            
+
+    
+          
+    

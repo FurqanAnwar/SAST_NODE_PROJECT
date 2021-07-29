@@ -1,0 +1,57 @@
+mixin footerItems(obj)
+ .footer-link-wrapper
+  .footer-link-items
+    h2=obj.title
+    each key in obj
+     if key == "How it works"
+       a(href="/signup")= key
+     else
+       a(href="/")=key
+          
+           
+.footer-container
+  section.footer-subscription
+   p.footer-subscription-heading Join the SAST Team newsletter to receive our best skill tips
+   p.footer-subscription-text  You can unsubscribe at any time.
+   .input-areas
+    form
+     input.footer-input(name='email'
+              type='email'
+              placeholder='Your Email')
+     
+     button.btn.btn--outline Subscribe
+    
+  .footer-links
+   +footerItems({title: "About Us", link1:"How it works", link2:"Testimonials", link3:"Careers", link4:"Terms of use"})
+   +footerItems({title: "Contact Us", link1:"Contact", link2:"Support", link3:"Sponsorship"})
+   +footerItems({title: "Social Media", link1:"Instagram", link2:"Facebook", link3:"Youtube", link4:"Twitter"})
+        
+  section.social-media
+   .social-media-wrap
+    .footer-logo
+     a.social-logo(href="/")
+      img( src="/images/Sast white.png" alt='' style="height: 80px ;width: 80px ")
+
+    small.website-rights SAST © 2020
+
+    .social-icons
+     a.social-icon-link.facebook(href='/' target='_blank' aria-label='Facebook')
+      i.fa.fa-facebook
+            
+     a.social-icon-link.instagram(href='/' target='_blank' aria-label='Instagram')
+      i.fa.fa-instagram
+    
+     a.social-icon-link.facebook(href='/' target='_blank' aria-label='Youtube')
+      i.fa.fa-youtube
+
+     a.social-icon-link.facebook(href='/' target='_blank' aria-label='Twitter')
+      i.fa.fa-twitter
+
+     a.social-icon-link.facebook(href='/' target='_blank' aria-label='Linkedin')
+      i.fa.fa-linkedin
+   
+
+   
+    
+  
+      

@@ -1,0 +1,22 @@
+extends base
+mixin helpGridItem(data)
+ .helpgrid-item
+  button.helpbtn
+   a.noDec(href="/" target="blank")= data
+        
+block content
+ .helpbackground
+  .helpouter
+  .helpArea
+   .helptxt
+    p TEAM SAST provides you help to solve OWASP Top Ten! ;)
+   .helpgrid-container
+    +helpGridItem("SQL injection")
+    +helpGridItem("Broken Authentication")
+    +helpGridItem("Data Exposure")
+    +helpGridItem("XS scripting")
+    +helpGridItem("XML External Entity")
+    +helpGridItem("Insecure Deserialization")
+    +helpGridItem("Vulnerable Version")
+    +helpGridItem("Insufficient Logging")
+        

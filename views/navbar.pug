@@ -1,0 +1,24 @@
+mixin navItem(name,link)
+  li.nav-item
+    a.nav-link(href=link)=name
+                    
+nav.navbar.navbar-expand-lg.customnav
+   .container-fluid
+    a.navbar-brand(href="/" style="margin-left: 130px;color:white;font-size:30px;font-weight:bold") SAST
+      img(src="/images/Sast white.png" alt='Sast Logo' style="width: 30px;height:30px") 
+    button.navbar-toggler.coloring(type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+    span.navbar-to
+    .collapse.navbar-collapse#navbarSupportedContent(style="flex-basis:337px ;flex-grow:0 ;margin-right:0 auto")
+    ul.navbar-nav.mr-auto.mb-2.mb-lg-0.fw-bold
+     +navItem("Dashboard","/dashboard")
+     +navItem("Help", "/help")
+     +navItem("MoreTasks","/moreTasks")
+     +navItem("Instructions","/instructions")
+     +navItem("Profile","/updatePassword")
+     li.nav-item
+      if user
+       a#btn-navbar.btn-logout.bthat.nav-link.btn.btn-sm.shadow( href="/logout") Log Out 
+      else 
+       a#btn-navbar.bthat.nav-link.btn.btn-sm.shadow( href="/signin") Log In
+                    
+           

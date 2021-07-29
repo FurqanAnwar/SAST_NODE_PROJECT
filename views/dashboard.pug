@@ -1,0 +1,60 @@
+extends base
+mixin tableData(obj,tag)
+  tr
+   each elem in obj
+    td
+     tag=elem
+
+mixin gridItem(obj)
+ .grid-item
+  .txtBalance
+  h1=obj.h1
+  div 
+   h6=obj.h6
+            
+block content 
+ if role != "admin"
+  .background 
+   .myspace 
+   .statusarea
+    h2.toptxt Your Status
+    .statusbar
+     .grid-container
+      +gridItem({h1:user.presentRank, h6:"Present Rank"})
+      +gridItem({h1:user.gotPoints, h6:"You Got Points"})
+      +gridItem({h1:user.taskCompleted, h6:"Tasks Completed"})
+      +gridItem({h1:activeUsers, h6:"Active Users"})
+   .myspace
+   div
+    table
+     +tableData({1:0,2:200,3:500,4:100,5:2000}, "h1")
+     +tableData({1:"Learner", 2:"Script Kiddi", 3:"Hacker", 4:"Pro Hacker", 5:"Legend"}, "h6")
+   .myspace
+   .tasksArea
+    p.tasktxt TEAM SAST dare you to solve these OWASP Top Ten! ;)
+    .btnclass 
+     .mbtn-group
+      button.noDec
+       a(href="/"  target="blank") CMD injection
+      button.noDec
+       a(href="/"  target="blank") SQL injection
+      button.noDec
+       a(href="/"  target="blank") Broken Authentication
+      button.noDec
+       a(href="/"  target="blank") Data Exposure
+      button.noDec
+       a(href="/"  target="blank") XS scripting
+      button.noDec
+       a(href="/"  target="blank") XML External Entity
+      button.noDec
+       a(href="/"  target="blank") Insecure Deserialization
+      button.noDec
+       a(href="/"  target="blank") Vulnerable Version
+      button.noDec
+       a(href="/"  target="blank") Insufficient Logging
+      button.noDec
+       a(href="/"  target="blank") Name This 10th
+ else
+  div= user.role 
+  div= user.email         
+        

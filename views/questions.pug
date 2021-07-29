@@ -1,0 +1,19 @@
+extend base 
+
+block content 
+ .questions-container
+  -var arr = questionsArr
+   each item,index in arr
+    .question-container 
+     h1.question.question-=item.question
+     input.answer(type="text" )
+     .btn-container
+      button.submit-btn submit ans
+  button.submit-btn(style="margin:0 auto") submit 
+    //-  else
+    //-   .question-container
+    //-   h1.question.question-=item.question
+    //-   input.answer(type="text")
+    //-   .btn-container
+    //-    button.submit-btn submit ans
+    
