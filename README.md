@@ -20,8 +20,8 @@ git clone https://github.com/FurqanAnwar/SAST_NODE_PROJECT.git
 ~~~
 yarn install
 ~~~
-
-3. Run Project
+3. You need to define your own .env file with credential in order for app to run perfectly
+4. Run Project
 ~~~
 yarn start (For Backend to run)
 yarn build:js (For Parcel Bundler to run)
